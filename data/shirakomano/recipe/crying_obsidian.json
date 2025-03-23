@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "crying_obsidian",
+    "pattern": [
+        "00 ",
+        "00 ",
+        "   "
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:crying_obsidian"
+        }
+    },
+    "result": {
+        "id": "minecraft:crying_obsidian",
+        "count": 8
+    },
+    "show_notification": true
+}

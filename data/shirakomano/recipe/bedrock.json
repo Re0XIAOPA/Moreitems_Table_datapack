@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "bedrock",
+    "pattern": [
+        "000",
+        "&#&",
+        "%%%"
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "&": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "#": {
+            "item": "minecraft:nether_star"
+        },
+        "%": {
+            "item": "minecraft:obsidian"
+        }
+    },
+    "result": {
+        "id": "minecraft:bedrock",
+        "count": 1
+    },
+    "show_notification": true
+}

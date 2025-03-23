@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "dragon_egg",
+    "pattern": [
+        "000",
+        "000",
+        "000"
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "id": "minecraft:dragon_egg",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "packed_ice",
+    "pattern": [
+        " 00",
+        " 00",
+        "   "
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:packed_ice"
+        }
+    },
+    "result": {
+        "id": "minecraft:packed_ice",
+        "count": 4
+    },
+    "show_notification": true
+}

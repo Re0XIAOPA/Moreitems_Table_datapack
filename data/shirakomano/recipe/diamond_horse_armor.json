@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "group": "diamond_horse_armor",
+    "pattern": [
+        "  0",
+        "010",
+        "000"
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:diamond"
+        },
+        "1": {
+            "item": "minecraft:diamond_block"
+        }
+    },
+    "result": {
+        "id": "minecraft:diamond_horse_armor",
+        "count": 1
+    },
+    "show_notification": true
+}

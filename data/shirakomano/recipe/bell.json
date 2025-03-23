@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "bell",
+    "pattern": [
+        "0  ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "0": {
+            "item": "minecraft:bell"
+        }
+    },
+    "result": {
+        "id": "minecraft:bell",
+        "count": 2
+    },
+    "show_notification": true
+}

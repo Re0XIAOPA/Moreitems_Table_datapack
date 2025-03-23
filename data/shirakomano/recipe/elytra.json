@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "elytra",
+  "pattern": [
+    "000",
+    "121",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:shulker_shell"
+    },
+    "1": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "2": {
+      "item": "minecraft:saddle"
+    }
+  },
+  "result": {
+    "id": "minecraft:elytra",
+    "count": 1
+  },
+  "show_notification": true
+}
