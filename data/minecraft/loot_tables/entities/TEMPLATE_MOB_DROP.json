@@ -1,0 +1,38 @@
+{
+    "__comment": "这是一份模板文件。如果您需要为其他怪物添加堆叠支持，请复制此文件并修改。",
+    "__comment_en": "This is a template. Copy this file to support new mob drops.",
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:填写物品ID_在这里 (PUT_ITEM_ID_HERE)",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        },
+                        {
+                            "function": "minecraft:looting_enchant",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:max_stack_size": 64
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
