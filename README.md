@@ -44,8 +44,10 @@ This datapack modifies the stack size limit for certain items.
 | 不死图腾 (Totem of Undying) | 1 | 64 |
 | 蜂蜜瓶 (Honey Bottle) | 16 | 64 |
 | 鸡蛋 (Egg) | 16 | 64 |
-| 鞍 (Saddle) | 1 | 128 |
-| 附魔金苹果 (Enchanted Golden Apple) | 64 | 666 |
+| 鞍 (Saddle) | 1 | 99 |
+| 附魔金苹果 (Enchanted Golden Apple) | 64 | 99 |
+
+> **⚠️ 说明**: 由于 Minecraft 原版协议限制，安全的最大堆叠数量为 **99**。
 
 ### 机制与转换 (Mechanism & Conversion)
 
@@ -62,11 +64,11 @@ The datapack modifies the components of **Dropped Item Entities** to breakthroug
 
 如果您想为其他物品设置自定义堆叠数量，可以参考以下文件结构：
 
-1.  **标签 (Tag)**: 在 `data/shirakomano/tags/item/` 目录下，您可以找到 `stack_to_64.json`, `stack_to_128.json` 等文件。将您想要的物品 ID 添加到对应的列表中。
-2.  **修改器 (Modifier)**: 如果您需要一个新的堆叠数量（比如 1000），您需要：
-    - 复制 `data/shirakomano/item_modifier/set_stack_64.json` 为 `set_stack_1000.json`，并将里面的数字改为 1000。
-    - 创建一个新的标签 `stack_to_1000.json`，放入物品 ID。
-    - 修改 `data/shirakomano/function/fix_item.mcfunction` 和 `fix_player.mcfunction`，添加对新标签的检测代码。
+1.  **标签 (Tag)**: 在 `data/shirakomano/tags/item/` 目录下，您可以找到 `stack_to_64.json`, `stack_to_99.json` 等文件。将您想要的物品 ID 添加到对应的列表中。
+2.  **修改器 (Modifier)**: 如果您需要一个新的堆叠数量（比如 16），您需要：
+    - 复制 `data/shirakomano/item_modifier/set_stack_64.json` 为 `set_stack_16.json`，并将里面的数字改为 16。
+    - 创建一个新的标签 `stack_to_16.json`，放入物品 ID。
+    - 修改 `data/shirakomano/function/fix_item.mcfunction` 和 `fix_player.mcfunction`，添加对新标签的检测代码.
 
 ### 进阶：关于战利品表 (Advanced: Loot Tables)
 
