@@ -51,14 +51,16 @@ This datapack modifies the stack size limit for certain items.
 
 ### 机制与转换 (Mechanism & Conversion)
 
-本数据包通过修改**掉落物实体 (Dropped Item Entity)** 的组件来实现堆叠限制突破。这意味着物品必须经历一次“掉落”过程才能被修改。
+本数据包通过修改物品组件来实现堆叠限制突破。我们采用了**全方位自动检测系统**，确保您无需繁琐操作即可享受新功能。
 
-The datapack modifies the components of **Dropped Item Entities** to breakthrough stack limits. This means items must undergo a "drop" process to be modified.
+This datapack modifies item components to breakthrough stack limits. We use a **comprehensive automatic detection system** to ensure you can enjoy new features without tedious operations.
 
 - **自动应用 (Auto-Apply)**:
-    - **打怪掉落 (Mob Drops)**: 怪物死亡掉落的物品（如末影珍珠）会自动被修改，捡起后即可堆叠到 64。
-    - **手持物品 (Held Items)**: 当您将旧的物品**拿在手上**（主手或副手）时，数据包会自动将其转换为 64 堆叠版本。这解决了从箱子取出旧物品无法堆叠的问题。
-    - **丢弃物品 (Player Drops)**: 玩家将旧的物品扔在地上，也会触发修改。
+    - **🎒 玩家背包 (Inventory)**: 只要物品进入您的背包（包括快捷栏和背包栏），数据包会瞬间自动将其转换为可堆叠版本。无论是捡起的、合成的还是从箱子拿出来的。
+    - **👁️ 末影箱 (Ender Chest)**: 放入末影箱的物品也会被自动检测和修改。
+    - **✋ 手持物品 (Held Items)**: 拿在手上的物品会实时被修改。
+    - **⚔️ 打怪掉落 (Mob Drops)**: 怪物（如末影人）死亡掉落的物品在生成瞬间即被修改，确保刷怪塔效率。
+    - **🛠️ 合成产物 (Crafting)**: 鞍和附魔金苹果等自定义合成配方已直接修改，合成出来即为 99 堆叠版，支持 Shift 批量合成。
 
 ### 自定义堆叠数量 (Customizing Stack Sizes)
 
@@ -68,7 +70,7 @@ The datapack modifies the components of **Dropped Item Entities** to breakthroug
 2.  **修改器 (Modifier)**: 如果您需要一个新的堆叠数量（比如 16），您需要：
     - 复制 `data/shirakomano/item_modifier/set_stack_64.json` 为 `set_stack_16.json`，并将里面的数字改为 16。
     - 创建一个新的标签 `stack_to_16.json`，放入物品 ID。
-    - 修改 `data/shirakomano/function/fix_item.mcfunction` 和 `fix_player.mcfunction`，添加对新标签的检测代码.
+    - 修改 `data/shirakomano/function/fix_slot.mcfunction` 添加对新标签的检测逻辑。
 
 ### 进阶：关于战利品表 (Advanced: Loot Tables)
 
@@ -85,8 +87,8 @@ The datapack modifies the components of **Dropped Item Entities** to breakthroug
     - 对于**普通物品**（如鞍、图腾），只修改标签完全足够。
 
 - **注意事项 (Notes)**:
-    - **旧物品处理 (Old Items)**: 如果箱子里有旧的物品，只需**拿在手上**或者**扔在地上**即可自动升级。
-    - **混合堆叠 (Merging)**: 带有 64 堆叠组件的新物品无法直接堆叠到旧物品上，请将旧物品也拿在手上“过”一遍即可。
+    - **旧物品处理 (Old Items)**: 如果箱子里有旧的物品，只需**放进背包**或**末影箱**，甚至**拿在手上**，它们就会自动升级。
+    - **混合堆叠 (Merging)**: 带有 64 堆叠组件的新物品无法直接堆叠到旧物品上，请将旧物品也“过”一遍（放进背包）即可。
     - **刷怪塔 (Mob Farms)**: 刷怪塔产出的物品在掉落瞬间已被修改，因此在收集系统中可以正常堆叠。
 
 ## 安装说明 (Installation)
